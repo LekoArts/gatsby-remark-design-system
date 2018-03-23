@@ -8,5 +8,5 @@ module.exports.paletteParse = function paletteParse(input) {
   return input
     .split('\n')
     .map(x => x.split(','))
-    .map(p => ({ name: p[0], value: p[1].trim() }));
+    .map(p => ({ name: p[0], color: p[1].trim() }));
 };
