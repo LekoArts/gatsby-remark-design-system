@@ -26,9 +26,13 @@ module.exports = ({ markdownAST }, { classPrefix = `grds` } = {}) => {
     const Span = TransformedSpecimen.SpecimenSpan;
     const Output = TransformedSpecimen.SpecimenOutput;
 
+    if (Output === null) {
+      return false;
+    }
+
     // Display our specimen
     node.type = `html`;
-    node.value = `<div class="${className}" style="box-sizing: border-box; display: flex; flex-wrap: wrap; margin: 24px 0 0 0; padding: 0; position: relative; flex-basis: calc(${Span} / 6 * 100% - 10px); max-width: calc(${Span} / 6 * 100% - 10px)">
+    node.value = `<div class="${className} ${classPrefix}-wrapper" style="box-sizing: border-box; display: flex; flex-wrap: wrap; padding: 0; position: relative; flex-basis: calc(${Span} / 6 * 100% - 10px); max-width: calc(${Span} / 6 * 100% - 10px)">
         ${Output}
       </div>`;
   });
