@@ -1,11 +1,12 @@
 [![GitHub license](https://img.shields.io/github/license/LeKoArts/gatsby-remark-design-system.svg?style=flat-square)](https://github.com/LeKoArts/gatsby-remark-design-system/blob/master/LICENSE)
 [![npm package](https://img.shields.io/npm/v/gatsby-remark-design-system.svg?style=flat-square)](https://www.npmjs.org/package/gatsby-remark-design-system)
-[![LekoArts Homepage](https://img.shields.io/badge/lekoarts-homepage-blue.svg)](https://www.lekoarts.de)
+[![LekoArts Homepage](https://img.shields.io/badge/lekoarts-homepage-blue.svg?style=flat-square)](https://www.lekoarts.de)
 
 # gatsby-remark-design-system
 🎨 Create your design system with Gatsby in Markdown
 
 See it [live in action](https://gatsby-remark-design-system.netlify.com/)!
+You can also have a look at the [example repo](https://github.com/LeKoArts/gatsby-remark-design-system-example).
 
 # Scope of this plugin
 
