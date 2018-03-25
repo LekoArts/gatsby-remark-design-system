@@ -4,17 +4,18 @@ const Transformer = require('./utils/Transformer');
 module.exports = ({ markdownAST }, { classPrefix = `grds` } = {}) => {
   visit(markdownAST, 'code', node => {
     // Get the specimen name (required) and the options (optional)
-    const spec = node.lang.split('|')[0];
-    const specOpt = node.lang.split('|')[1];
+    let spec = false;
+    let specOpt = false;
+    if (node.lang) {
+      spec = node.lang.split('|')[0];
+      specOpt = node.lang.split('|')[1];
+    }
 
-    // Don't error out with a missing specimen name as other plugins like PrismJS need it
     let SpecimenName = 'none';
     let SpecimenOption = 'none';
-
     if (spec) {
       SpecimenName = spec.toLowerCase().trim();
     }
-
     if (specOpt) {
       SpecimenOption = specOpt.toLowerCase().trim();
     }
