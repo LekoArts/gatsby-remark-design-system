@@ -1,7 +1,7 @@
 const svg = require('../utils/svg');
 
 module.exports = class Video {
-  constructor(autoplay = 'false', classPrefix, loop = 'false', muted = 'false', name, src) {
+  constructor(autoplay = 'false', classPrefix, loop = 'false', muted = 'false', name = 'No name defined', src) {
     this.autoplay = autoplay;
     this.classPrefix = classPrefix;
     this.loop = loop;

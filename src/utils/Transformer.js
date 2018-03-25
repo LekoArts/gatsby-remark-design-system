@@ -39,11 +39,11 @@ module.exports = class Transformer {
       };
     } else if (SpecimenName === 'download') {
       const value = parser.standardParse(nodeValue);
-      const { color, src, subtitle, title, width } = value;
+      const { color, image, src, subtitle, title, width } = value;
       if (value.span) {
         _span = value.span;
       }
-      const Specimen = new Download(classPrefix, color, src, subtitle, title, width);
+      const Specimen = new Download(classPrefix, color, image, src, subtitle, title, width);
       return {
         SpecimenSpan: _span,
         SpecimenOutput: Specimen.output(),
