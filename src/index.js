@@ -6,6 +6,7 @@ module.exports = ({ markdownAST }, { classPrefix = `grds` } = {}) => {
     // Get the specimen name (required) and the options (optional)
     let spec = false;
     let specOpt = false;
+    // Don't parse code blocks without language
     if (node.lang) {
       spec = node.lang.split('|')[0];
       specOpt = node.lang.split('|')[1];
