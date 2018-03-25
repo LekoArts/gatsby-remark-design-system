@@ -1,8 +1,15 @@
 {
   "name": "gatsby-remark-design-system",
-  "description": "Remark Plugin to create your Design System with preconfigured Specimens",
+  "description":
+    "Remark Plugin to create your Design System with preconfigured Specimens",
   "version": "1.0.0",
   "author": "LekoArts <hello@lekoarts.de>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LeKoArts/gatsby-remark-design-system"
+  },
+  "homepage":
+    "https://github.com/LeKoArts/gatsby-remark-design-system/blob/master/README.md",
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "lodash": "^4.17.5",
@@ -13,7 +20,7 @@
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "cross-env": "^5.1.4",
-    "eslint": "^4.19.0",
+    "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.9.0",
@@ -22,7 +29,11 @@
     "remark": "^7.0.1"
   },
   "keywords": [
-    "TBD"
+    "gatsby",
+    "gatsby-plugin",
+    "remark",
+    "design-system",
+    "specimens"
   ],
   "license": "MIT",
   "main": "index.js",

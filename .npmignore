@@ -33,3 +33,4 @@ flow-typed
 coverage
 decls
 examples
+.eslintrc

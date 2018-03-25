@@ -1,7 +1,7 @@
 const fromPairs = require('lodash/fromPairs');
 
 module.exports.standardParse = function standardParse(input) {
-  return fromPairs(input.split('\n').map(e => e.split(/:(?!\/\/|\d)/).map(x => x.trim())));
+  return fromPairs(input.split('\n').map(e => e.split(/:(?!\/\/|\d)/).map(x => x.trim()))); // Keep our forward slashes in URLs
 };
 
 module.exports.paletteParse = function paletteParse(input) {

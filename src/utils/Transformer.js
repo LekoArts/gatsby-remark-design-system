@@ -25,11 +25,6 @@ module.exports = class Transformer {
     } else if (SpecimenName === 'color') {
       const value = parser.standardParse(nodeValue);
       const { color, name } = value;
-      if (value.span) {
-        _span = value.span;
-      } else {
-        _span = 1;
-      }
       const Specimen = new Color(classPrefix, color, name);
       return {
         SpecimenSpan: _span,
