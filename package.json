@@ -1,8 +1,8 @@
 {
   "name": "gatsby-remark-design-system",
   "description":
-    "Remark Plugin to create your Design System with preconfigured Specimens",
-  "version": "1.0.0",
+    "Remark plugin to create your design system with preconfigured specimens",
+  "version": "1.0.1",
   "author": "LekoArts <hello@lekoarts.de>",
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
   "main": "index.js",
   "scripts": {
     "build": "babel src --out-dir . --ignore __tests__",
+    "prepublish": "cross-env NODE_ENV=production npm run build",
     "watch": "babel -w src --out-dir . --ignore __tests__"
   }
 }
