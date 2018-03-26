@@ -12,6 +12,8 @@ You can also have a look at the [example repo](https://github.com/LeKoArts/gatsb
 
 **gatsby-remark-design-system** is a plugin that sits on top of Gatsby's remark transformer. You'll need to setup a Gatsby project and install *at least* the plugins `gatsby-source-filesystem`, `gatsby-transformer-remark` and `gatsby-plugin-sass`. You then can use the so called **Specimens** in your markdown files to create your design system or styleguide.
 
+Writing content in markdown is easy and so should be creating a design system. Including this plugin into your project will help you create a design system from scratch in no time - and you can also include other plugins, e.g. `gatsby-remark-prismjs` to have syntax highlighted code.
+
 # Install
 
 ```bash
@@ -19,6 +21,8 @@ npm install gatsby-remark-design-system
 ```
 
 # How to use
+
+**Note:** If you're unsure about the instructions take a look at the implementation of the [example repo](https://github.com/LeKoArts/gatsby-remark-design-system-example)!
 
 ```js
 // In your gatsby-config.js
@@ -31,7 +35,7 @@ plugins: [
           resolve: 'gatsby-remark-design-system',
           options: {
             // Class prefix for all elements of the design system specimens
-            // This prefix also needs to be set to some wrapper components in your Gatsby project
+            // This prefix also needs to be set on wrapper components in your Gatsby project
             // Default value is 'grds' - so if you want you can leave out this option entirely
             classPrefix: 'grds',
           }
@@ -44,15 +48,27 @@ plugins: [
 
 ## Include CSS
 
-The plugin ships with a theme that you can easily include in your Gatsby project, or you can build your own theme by copying and modyfing an example.
-
-If you change the `classPrefix` you'll need to create your own SCSS file (but you could just copy the file)!
-
-To load the theme, just require its SCSS (you'll need to a plugin to use this SCSS file), e.g.
+The plugin ships with a theme that you can easily include in your Gatsby project, or you can build your own theme by copying and modyfing the example.  
+To load the theme, just require its SCSS, e.g.
 
 ```js
 // layouts/index.js
 require('gatsby-remark-design-system/theme/gatsby-remark-design-system-theme.scss');
+```
+
+If you just want to change the `classPrefix` or other SCSS variables (but otherwise want to use the preconfigured theme) you should overwrite the variables like so:
+
+```scss
+// Create a empty scss file that gets imported into your project (e.g. base.scss)
+
+$prefix: cool;
+$primary: #c93a3c;
+
+// Import your other scss files if necessary
+// .......
+
+// Import the theme
+@import '~gatsby-remark-design-system/theme/gatsby-remark-design-system-theme.scss';
 ```
 
 ## Changes to your template
