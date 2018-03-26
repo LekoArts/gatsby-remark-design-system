@@ -1,31 +1,31 @@
 // Variables
 // Make sure that your prefix is the same as "classPrefix" in your gatsby-config.js
 
-$prefix: grds;
-$primary: #48ba6f;
-$bg: #f4f6f8;
-$pb: 20px;
-$br: 10px;
-$br--sm: 5px;
-$icon-size: 25px;
+$prefix: grds !default;
+$primary: #48ba6f !default;
+$bg: #f4f6f8 !default;
+$pb: 20px !default;
+$br: 10px !default;
+$br--sm: 5px !default;
+$icon-size: 25px !default;
 
-$text--desc: #7d858c;
-$text--badge: #2e2e2e;
+$text--desc: #7d858c !default;
+$text--badge: #2e2e2e !default;
 
-$badge--bg: #c5d3e0;
-$line: #c5d3e0;
+$badge--bg: #c5d3e0 !default;
+$line: #c5d3e0 !default;
 
-$green--bg: #ecfaea;
-$green--border: #c0ebc8;
-$green--text: #307c3f;
+$green--bg: #ecfaea !default;
+$green--border: #c0ebc8 !default;
+$green--text: #307c3f !default;
 
-$red--bg: #fef5f5;
-$red--border: #fcddde;
-$red--text: #c93a3c;
+$red--bg: #fef5f5 !default;
+$red--border: #fcddde !default;
+$red--text: #c93a3c !default;
 
-$grey--bg: #f4f6f8;
-$grey--border: #d9eafa;
-$grey--text: #7a7d80;
+$grey--bg: #f4f6f8 !default;
+$grey--border: #d9eafa !default;
+$grey--text: #7a7d80 !default;
 
 // ------------------------------------------------
 
