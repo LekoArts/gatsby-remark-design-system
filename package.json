@@ -2,7 +2,7 @@
   "name": "gatsby-remark-design-system",
   "description":
     "Remark plugin to create your design system with preconfigured specimens",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "LekoArts <hello@lekoarts.de>",
   "repository": {
     "type": "git",

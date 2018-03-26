@@ -10,7 +10,7 @@ You can also have a look at the [example repo](https://github.com/LeKoArts/gatsb
 
 # Scope of this plugin
 
-**gatsby-remark-design-system** is a plugin that sits on top of Gatsby's remark transformer. You'll need to setup a Gatsby project and install *at least* the plugins `gatsby-source-filesystem`, `gatsby-transformer-remark` and `gatsby-plugin-sass`. You then can use the so called **Specimens** in your markdown files to create your design system or styleguide.
+**gatsby-remark-design-system** (inspired by [Catalog](https://www.catalog.style/)) is a plugin that sits on top of Gatsby's remark transformer. You'll need to setup a Gatsby project and install *at least* the plugins `gatsby-source-filesystem`, `gatsby-transformer-remark` and `gatsby-plugin-sass`. You then can use the so called **Specimens** in your markdown files to create your design system or styleguide.
 
 Writing content in markdown is easy and so should be creating a design system. Including this plugin into your project will help you create a design system from scratch in no time - and you can also include other plugins, e.g. `gatsby-remark-prismjs` to have syntax highlighted code.
 
