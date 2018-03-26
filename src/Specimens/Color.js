@@ -6,7 +6,7 @@ module.exports = class Color {
     this.color = color;
     this.name = name;
     this.tyColor = ty(this.color);
-    this.hex = this.tyColor.toHex8String();
+    this.hex = this.tyColor.toHexString();
     this.rgb = this.tyColor.toRgb();
   }
 
