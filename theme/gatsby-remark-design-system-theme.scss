@@ -70,6 +70,9 @@ $grey--text: #7a7d80 !default;
   // Color
   &-color {
     display: inline-block !important;
+    @media (max-width: 700px) {
+      display: block !important;
+    }
   }
   &-color__container {
     border-radius: $br;
