@@ -1,6 +1,13 @@
 const visit = require('unist-util-visit');
 const Transformer = require('./utils/Transformer');
 
+function width(Span) {
+  if (Span === 6) {
+    return `flex-basis: 100%; max-width: 100%;`;
+  }
+  return `flex-basis: calc(${Span} / 6 * 100% - 10px); max-width: calc(${Span} / 6 * 100% - 10px)`;
+}
+
 module.exports = ({ markdownAST }, { classPrefix = `grds` } = {}) => {
   visit(markdownAST, 'code', (node, index, parent) => {
     // Get the specimen name (required) and the options (optional)
@@ -32,7 +39,9 @@ module.exports = ({ markdownAST }, { classPrefix = `grds` } = {}) => {
     if (Output != null) {
       // Output our specimen
       node.type = `html`;
-      node.value = `<div class="${className} ${classPrefix}-wrapper" style="box-sizing: border-box; display: flex; flex-wrap: wrap; padding: 0; position: relative; flex-basis: calc(${Span} / 6 * 100% - 10px); max-width: calc(${Span} / 6 * 100% - 10px)">
+      node.value = `<div class="${className} ${classPrefix}-wrapper" style="box-sizing: border-box; display: flex; flex-wrap: wrap; padding: 0; position: relative; ${width(
+        Span
+      )}">
           ${Output}
         </div>`;
     }
