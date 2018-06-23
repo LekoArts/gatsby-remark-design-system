@@ -1,15 +1,13 @@
 {
   "name": "gatsby-remark-design-system",
-  "description":
-    "Remark plugin to create your design system with preconfigured specimens",
-  "version": "1.0.9",
+  "description": "Remark plugin to create your design system with preconfigured specimens",
+  "version": "1.0.10",
   "author": "LekoArts <hello@lekoarts.de>",
   "repository": {
     "type": "git",
     "url": "https://github.com/LeKoArts/gatsby-remark-design-system"
   },
-  "homepage":
-    "https://github.com/LeKoArts/gatsby-remark-design-system/blob/master/README.md",
+  "homepage": "https://github.com/LeKoArts/gatsby-remark-design-system/blob/master/README.md",
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "lodash": "^4.17.5",
@@ -19,12 +17,16 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
     "cross-env": "^5.1.4",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
     "prettier": "^1.11.1",
     "remark": "^7.0.1"
   },
