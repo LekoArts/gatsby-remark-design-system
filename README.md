@@ -162,6 +162,20 @@ width: 250px
 ```
 ````
 
+## Example
+
+**Options**
+
+None
+
+**Example**
+
+````
+```example
+<button>You can insert your HTML here</button>
+```
+````
+
 ## Hint
 
 **Options**
