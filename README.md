@@ -48,7 +48,7 @@ plugins: [
 
 ## Include CSS
 
-The plugin ships with a theme that you can easily include in your Gatsby project, or you can build your own theme by copying and modyfing the example.  
+The plugin ships with a theme that you can easily include in your Gatsby project, or you can build your own theme by copying and modyfing the example.
 To load the theme, just require its SCSS, e.g.
 
 ```js
@@ -71,14 +71,7 @@ $primary: #c93a3c;
 @import '~gatsby-remark-design-system/theme/gatsby-remark-design-system-theme.scss';
 ```
 
-## Changes to your template
-
-You'll need to add a `className` to your `div` that holds the content of your markdown output. The prefix in your `className` needs to be the same as in your other options. The container gets a special styling without the plugin won't work - so don't forget that step!
-
-```jsx
-// templates/index.js
-<div className="grds-page" dangerouslySetInnerHTML={{ __html: postNode.html }} />
-```
+# Specimens
 
 You can use the specimens by using three backticks followed by the name. The content of the specimen then gets defined in the code block.
 
@@ -88,16 +81,14 @@ content
 ```
 ````
 
-# Specimens
-
 ## Audio
 
 **Options**
 
-`autoplay: boolean` Default: false  
-`loop: boolean` Default: false  
-`name: string`  
-`span: number[1-6]` Width of the specimen  
+`autoplay: boolean` Default: false
+`loop: boolean` Default: false
+`name: string`
+`span: number[1-6]` Width of the specimen
 `src: string` The path/url to the file. Needs to be in quotes
 
 **Example**
@@ -116,7 +107,7 @@ span: 3
 
 **Options**
 
-`color: string` Define the color (in HEX, e.g. #b0f6ff)  
+`color: string` Define the color (in HEX, e.g. #b0f6ff)
 `name: string`
 
 **Example**
@@ -132,7 +123,7 @@ color: #939d7b
 
 **Options**
 
-`name: string, color: string`  
+`name: string, color: string`
 Each line represents a color. First define the name then after a comma the HEX value
 
 **Example**
@@ -149,12 +140,12 @@ T200 - Smoke, #6c3b0b
 
 **Options**
 
-`color: string` Define the background color (in HEX, e.g. white) of the preview box  
-`image: boolean` If true the image will be shown below  
-`span: number[1-6]` Width of the specimen  
-`src: string` The path/url to the file. Needs to be in quotes  
-`subtitle: string` The filesize or other information   
-`title: string`  
+`color: string` Define the background color (in HEX, e.g. white) of the preview box
+`image: boolean` If true the image will be shown below
+`span: number[1-6]` Width of the specimen
+`src: string` The path/url to the file. Needs to be in quotes
+`subtitle: string` The filesize or other information
+`title: string`
 `width: string` The width of the preview image (default: 200px)
 
 **Example**
@@ -175,8 +166,8 @@ width: 250px
 
 **Options**
 
-`directive` Green, positive note for showing Dos  
-`warning` Red, warning note for showing Don'ts  
+`directive` Green, positive note for showing Dos
+`warning` Red, warning note for showing Don'ts
 `neutral` Neutral note (Default)
 
 **Example**
@@ -199,7 +190,7 @@ nooooooooo, not this way
 
 **Options**
 
-`size: number|weight: number|metrics: string|weightDesc: string|usage: string`  
+`size: number|weight: number|metrics: string|weightDesc: string|usage: string`
 Each line represents a type. You have to define the values in the mentioned order and seperate with `|`
 
 **Example**
@@ -215,10 +206,10 @@ Each line represents a type. You have to define the values in the mentioned orde
 
 **Options**
 
-`autoplay: boolean` Default: false  
-`loop: boolean` Default: false  
-`muted: boolean` Default: false  
-`name: string`  
+`autoplay: boolean` Default: false
+`loop: boolean` Default: false
+`muted: boolean` Default: false
+`name: string`
 `src: string` The path/url to the file. Needs to be in quotes
 
 **Example**

@@ -46,20 +46,6 @@ $grey--text: #7a7d80 !default;
     }
     margin: 0 10px 24px 0; // If you want to change the margin-right you'll also need to adjust the calc() on grds-wrapper (the -10px)
   }
-  // Make sure that the element containing your markdown content has the className
-  &-page {
-    display: flex;
-    flex-flow: row wrap;
-    // All paragraphs and headings need to be 100% width
-    > p,
-    > h1,
-    > h2,
-    > h3,
-    > h4,
-    > h5 {
-      flex-basis: 100%;
-    }
-  }
   // Audio
   &-audio__container {
     background: $bg;
@@ -82,6 +68,9 @@ $grey--text: #7a7d80 !default;
     width: 100%;
   }
   // Color
+  &-color {
+    display: inline-block !important;
+  }
   &-color__container {
     border-radius: $br;
     width: 300px;
