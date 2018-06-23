@@ -2,7 +2,7 @@ const visit = require('unist-util-visit');
 const Transformer = require('./utils/Transformer');
 
 module.exports = ({ markdownAST }, { classPrefix = `grds` } = {}) => {
-  visit(markdownAST, 'code', node => {
+  visit(markdownAST, 'code', (node, index, parent) => {
     // Get the specimen name (required) and the options (optional)
     let spec = false;
     let specOpt = false;
@@ -24,7 +24,7 @@ module.exports = ({ markdownAST }, { classPrefix = `grds` } = {}) => {
     // Set the outer class name
     const className = `${classPrefix}-${SpecimenName}`;
 
-    const TransformedSpecimen = Transformer.transform(SpecimenName, SpecimenOption, node.value, classPrefix);
+    const TransformedSpecimen = Transformer.transform(SpecimenName, SpecimenOption, node, classPrefix, index, parent);
     const Span = TransformedSpecimen.SpecimenSpan;
     const Output = TransformedSpecimen.SpecimenOutput;
 
