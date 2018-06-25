@@ -1,4 +1,5 @@
 const ty = require('tinycolor2');
+const colors = require('../utils/colors');
 
 module.exports = class Color {
   constructor(classPrefix, color, name = 'No name defined') {
@@ -8,6 +9,7 @@ module.exports = class Color {
     this.tyColor = ty(this.color);
     this.hex = this.tyColor.toHexString();
     this.rgb = this.tyColor.toRgb();
+    this.cmyk = colors.RGBToCMYK(this.rgb.r, this.rgb.g, this.rgb.b);
   }
 
   blackSmall() {
@@ -75,6 +77,10 @@ module.exports = class Color {
 				<div class="${this.classPrefix}-color__info__item">
 					<p>RGB</p>
 					<p>${this.rgb.r}, ${this.rgb.g}, ${this.rgb.b}</p>
+				</div>
+				<div class="${this.classPrefix}-color__info__item">
+					<p>CMYK</p>
+					<p>${this.cmyk.C}, ${this.cmyk.M}, ${this.cmyk.Y}, ${this.cmyk.K}</p>
 				</div>
       </div>
     </div>

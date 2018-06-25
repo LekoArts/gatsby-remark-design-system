@@ -173,9 +173,12 @@ $grey--text: #7a7d80 !default;
   &-color-palette__item__name {
     padding: 0.5rem 1rem 0.5rem 0;
   }
+  &-color-palette__item__color:first-child {
+    width: 115px;
+  }
   &-color-palette__item__color {
     margin: 0.4rem 0;
-    width: 130px;
+    width: 140px;
     span:first-child {
       background: $badge--bg;
       color: $text--badge;

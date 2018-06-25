@@ -1,4 +1,5 @@
 const ty = require('tinycolor2');
+const colors = require('../utils/colors');
 
 module.exports = class ColorPalette {
   constructor(classPrefix, valueMap) {
@@ -10,8 +11,9 @@ module.exports = class ColorPalette {
     return this.valueMap
       .map(c => {
         const tyColor = ty(c.color);
-        const hex = tyColor.toHex8String();
+        const hex = tyColor.toHexString();
         const rgb = tyColor.toRgb();
+        const cmyk = colors.RGBToCMYK(rgb.r, rgb.g, rgb.b);
         return `
         <div class="${this.classPrefix}-color-palette__item">
           <div class="${this.classPrefix}-color-palette__left">
@@ -28,6 +30,10 @@ module.exports = class ColorPalette {
             <div class="${this.classPrefix}-color-palette__item__color">
               <span>RGB</span>
               <span>${rgb.r}, ${rgb.g}, ${rgb.b}</span>
+            </div>
+            <div class="${this.classPrefix}-color-palette__item__color">
+              <span>CMYK</span>
+              <span>${cmyk.C}, ${cmyk.M}, ${cmyk.Y}, ${cmyk.K}</span>
             </div>
           </div>
         </div>
