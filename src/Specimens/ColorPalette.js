@@ -25,15 +25,15 @@ module.exports = class ColorPalette {
           <div class="${this.classPrefix}-color-palette__right">
             <div class="${this.classPrefix}-color-palette__item__color">
               <span>HEX</span>
-              <span>${hex}</span>
+              <span class="clippy" data-clipboard-text="${hex}">${hex}</span>
             </div>
             <div class="${this.classPrefix}-color-palette__item__color">
               <span>RGB</span>
-              <span>${rgb.r}, ${rgb.g}, ${rgb.b}</span>
+              <span class="clippy" data-clipboard-text="${rgb.r}, ${rgb.g}, ${rgb.b}">${rgb.r}, ${rgb.g}, ${rgb.b}</span>
             </div>
             <div class="${this.classPrefix}-color-palette__item__color">
               <span>CMYK</span>
-              <span>${cmyk.C}, ${cmyk.M}, ${cmyk.Y}, ${cmyk.K}</span>
+              <span class="clippy" data-clipboard-text="${cmyk.C}, ${cmyk.M}, ${cmyk.Y}, ${cmyk.K}">${cmyk.C}, ${cmyk.M}, ${cmyk.Y}, ${cmyk.K}</span>
             </div>
           </div>
         </div>

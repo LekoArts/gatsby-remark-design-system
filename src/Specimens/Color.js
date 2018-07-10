@@ -72,15 +72,17 @@ module.exports = class Color {
 				</div>
 				<div class="${this.classPrefix}-color__info__item">
 					<p>Hex</p>
-					<p>${this.hex}</p>
+					<p class="clippy" data-clipboard-text="${this.hex}">${this.hex}</p>
 				</div>
 				<div class="${this.classPrefix}-color__info__item">
 					<p>RGB</p>
-					<p>${this.rgb.r}, ${this.rgb.g}, ${this.rgb.b}</p>
+					<p class="clippy" data-clipboard-text="${this.rgb.r}, ${this.rgb.g}, ${this.rgb.b}">${this.rgb.r}, ${this.rgb.g}, ${
+      this.rgb.b
+    }</p>
 				</div>
 				<div class="${this.classPrefix}-color__info__item">
 					<p>CMYK</p>
-					<p>${this.cmyk.C}, ${this.cmyk.M}, ${this.cmyk.Y}, ${this.cmyk.K}</p>
+					<p class="clippy" data-clipboard-text="${this.cmyk.C}, ${this.cmyk.M}, ${this.cmyk.Y}, ${this.cmyk.K}">${this.cmyk.C}, ${this.cmyk.M}, ${this.cmyk.Y}, ${this.cmyk.K}</p>
 				</div>
       </div>
     </div>
