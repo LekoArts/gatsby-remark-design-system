@@ -123,6 +123,9 @@ $grey--text: #7a7d80 !default;
     border-radius: 0 0 $br $br;
   }
   &-color__info__item {
+    .clippy {
+      display: inline-block;
+    }
     p:first-child {
       text-transform: uppercase;
       color: $text--desc;
@@ -318,4 +321,74 @@ $grey--text: #7a7d80 !default;
   &-video__videofile {
     width: 100%;
   }
+}
+
+// ------------------------------------------------
+// Primer Tooltip
+// ------------------------------------------------
+
+.clippy:hover {
+  cursor: pointer;
+}
+
+.tooltipped {
+  position: relative;
+}
+
+// This is the tooltip bubble
+.tooltipped::after {
+  position: absolute;
+  z-index: 1000000;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.1rem 0.3rem;
+  font: normal normal 11px/1.5 sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  color: white;
+  text-align: center;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: break-word;
+  white-space: pre;
+  pointer-events: none;
+  content: attr(aria-label);
+  background: black;
+  border-radius: 3px;
+}
+
+// This is the tooltip arrow
+.tooltipped::before {
+  position: absolute;
+  z-index: 1000001;
+  display: inline-block;
+  text-decoration: none;
+  width: 0;
+  height: 0;
+  color: black;
+  pointer-events: none;
+  content: "";
+  border: 6px solid transparent;
+}
+
+// Tooltips above the object
+.tooltipped-n {
+  &::after {
+    right: 50%;
+    bottom: 100%;
+    margin-bottom: 6px;
+  }
+
+  &::before {
+    top: -7px;
+    right: 50%;
+    bottom: auto;
+    margin-right: -6px;
+    border-top-color: black;
+  }
+}
+
+// Move the tooltip body to the center of the object.
+.tooltipped-n::after {
+  transform: translateX(50%);
 }

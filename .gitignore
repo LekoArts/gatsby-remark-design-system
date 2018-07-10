@@ -1,5 +1,8 @@
 index.js
+gatsby-browser.js
 /Specimens
 /utils
 /node_modules
 .idea
+!/src/gatsby-browser.js
+!/src/index.js
