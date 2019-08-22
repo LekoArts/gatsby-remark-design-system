@@ -8,6 +8,10 @@
 See it [live in action](https://gatsby-remark-design-system.netlify.com/)!
 You can also have a look at the [example repo](https://github.com/LeKoArts/gatsby-remark-design-system-example).
 
+# Important note!
+
+This plugin will no longer be maintained (except critical security fixes) as all the functionality was ported to MDX and [`@lekoarts/gatsby-theme-specimens`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-specimens). Building design systems with MDX is superior to Markdown and hence the new theme is way more powerful than the _remark_ version here. Please give the theme a try!
+
 # Scope of this plugin
 
 **gatsby-remark-design-system** (inspired by [Catalog](https://www.catalog.style/)) is a plugin that sits on top of Gatsby's remark transformer. You'll need to setup a Gatsby project and install *at least* the plugins `gatsby-source-filesystem`, `gatsby-transformer-remark` and `gatsby-plugin-sass`. You then can use the so called **Specimens** in your markdown files to create your design system or styleguide.
